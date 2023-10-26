@@ -1,0 +1,16 @@
+body {
+  background-color: blue;
+  color: aliceblue;
+}
+
+#header-btn-list {
+  display: flex;
+  list-style-type: none;
+}
+.btn-list {
+  margin-left: 10px;
+}
+
+#title {
+  text-align: center;
+}
