@@ -17,5 +17,6 @@ public class HalloUserApplication {
 
   public static void main(String[] args) {
     SpringApplication.run(HalloUserApplication.class, args);
+    System.out.println("list of members: " + clubb.getMembers());
   }
 }

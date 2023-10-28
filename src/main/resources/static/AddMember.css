@@ -1,4 +1,30 @@
 body {
-  background-color: black;
+  background-color: rgb(213, 22, 22);
   color: aliceblue;
+}
+#header-btn-list {
+  display: flex;
+  list-style-type: none;
+  margin: auto;
+  width: 15%;
+}
+.btn-list {
+  margin-left: 10px;
+}
+
+#title {
+  text-align: center;
+}
+#new-member-div {
+  margin: auto;
+  width: 20%;
+}
+#new-member {
+  display: grid;
+  color: black;
+  margin-top: 20px;
+}
+.form-input {
+  width: 300px;
+  margin-bottom: 10px;
 }

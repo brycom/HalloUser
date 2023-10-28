@@ -11,28 +11,28 @@
       <h2 class="header" id="title">The Clubb</h2>
       <ul class="header" id="header-btn-list">
         <li class="btn-list" id="btn-home">
-          <a href="">
+          <a th:href="@{/}">
             <button>Start sida.</button>
           </a>
         </li>
         <li class="btn-list" id="btn-new-member">
-          <a href="">
+          <a th:href="@{member-list}">
             <button>Medlems lista.</button>
           </a>
         </li>
       </ul>
     </header>
 
-    <div>
+    <div id="new-member-div">
       <form action="" id="new-member">
         <label for="first-name">Förnamn:</label>
-        <input type="text" id="first-name" />
+        <input type="text" class="form-input" id="first-name" />
         <label for="last-name">Efternamn:</label>
-        <input type="text" id="last-name" />
+        <input type="text" class="form-input" id="last-name" />
         <label for="city">Stad:</label>
-        <input type="text" id="city" />
+        <input type="text" class="form-input" id="city" />
         <label for="number-of-years">År som activ:</label>
-        <input type="text" id="number-of-years" />
+        <input type="text" class="form-input" id="number-of-years" />
       </form>
       <button id="add-new-member">Spara</button>
     </div>

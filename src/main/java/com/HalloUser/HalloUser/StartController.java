@@ -10,14 +10,7 @@ public class StartController {
   public String GetStart() {
     return "start";
   }
+  //redirect button to memberlist
 
-  @GetMapping("/new-member")
-  public String GetNewMember() {
-    return "AddMember";
-  }
-
-  @GetMapping("/member-list")
-  public String GetMemberList() {
-    return "MemberList";
-  }
+  //redirect button to new member
 }
