@@ -40,6 +40,6 @@ public class Clubb {
 
   public void addMember(String name, String city, int yearsActive) {
     int membershipNumber = members.size() + 1;
-    new Member(name, city, membershipNumber, yearsActive);
+    members.add(new Member(name, city, membershipNumber, yearsActive));
   }
 }

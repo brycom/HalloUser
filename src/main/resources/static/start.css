@@ -6,6 +6,8 @@ body {
 #header-btn-list {
   display: flex;
   list-style-type: none;
+  margin: auto;
+  width: 15%;
 }
 .btn-list {
   margin-left: 10px;
