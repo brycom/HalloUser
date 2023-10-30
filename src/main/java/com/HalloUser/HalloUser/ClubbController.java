@@ -10,9 +10,8 @@ public class ClubbController {
   @GetMapping("/member-list")
   public String GetMemberList(Model model) {
     model.addAttribute("members", HalloUserApplication.clubb.members);
+
     System.out.println("test");
     return "MemberList";
   }
-  //ta in medlemar från listan(använd Model)och skicka till html sidan.
-
 }

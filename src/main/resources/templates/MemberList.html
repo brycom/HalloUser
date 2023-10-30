@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="https://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,11 +28,11 @@
       <a href="">
         <button>Sök</button>
       </a>
-      <!--th:each loopa ut medlemmar i li från clubb controller.-->
-      <!--th:text för för och efternamn ellement hos medlem i span och länk för övrig info-->
       <ul id="memberlist">
         <li th:each="member: ${members}">
-          <span th:text="${member.name}"></span>
+          <span th:text="${member.firstName}"></span>
+          <span> </span>
+          <span th:text="${member.lastName}"></span>
         </li>
       </ul>
     </div>

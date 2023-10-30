@@ -38,8 +38,15 @@ public class Clubb {
     this.members = members;
   }
 
-  public void addMember(String name, String city, int yearsActive) {
+  public void addMember(
+    String firstName,
+    String lastName,
+    String city,
+    int yearsActive
+  ) {
     int membershipNumber = members.size() + 1;
-    members.add(new Member(name, city, membershipNumber, yearsActive));
+    members.add(
+      new Member(firstName, lastName, city, membershipNumber, yearsActive)
+    );
   }
 }
