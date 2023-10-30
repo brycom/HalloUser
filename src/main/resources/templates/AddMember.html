@@ -35,23 +35,32 @@
           type="text"
           class="form-input"
           id="first-name"
-          th:field="*{firstName}"
+          th:field="*{newMember.firstName}"
+          required
         />
         <label for="last-name">Efternamn:</label>
         <input
           type="text"
           class="form-input"
           id="last-name"
-          th:field="*{lastName}"
+          th:field="*{newMember.lastName}"
+          required
         />
         <label for="city">Stad:</label>
-        <input type="text" class="form-input" id="city" th:field="*{city}" />
+        <input
+          type="text"
+          class="form-input"
+          id="city"
+          th:field="*{newMember.city}"
+          required
+        />
         <label for="number-of-years">År som activ:</label>
         <input
           type="number"
           class="form-input"
           id="number-of-years"
-          th:field="*{yearsActive}"
+          th:field="*{newMember.yearsActive}"
+          required
         />
         <input type="submit" id="add-new-member" />
       </form>
