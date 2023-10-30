@@ -10,6 +10,8 @@ public class ClubbController {
   @GetMapping("/member-list")
   public String GetMemberList(Model model) {
     model.addAttribute("members", HalloUserApplication.clubb.members);
+    model.addAttribute("newMember", new Member(null, null, null, 0, 0));
+
     System.out.println("test");
     return "MemberList";
   }

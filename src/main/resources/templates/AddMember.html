@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="https://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,17 +24,37 @@
     </header>
 
     <div id="new-member-div">
-      <form action="" id="new-member">
+      <form
+        method="post"
+        th:action="@{/add-new-member}"
+        id="new-member"
+        th:objekt="${newMember}"
+      >
         <label for="first-name">Förnamn:</label>
-        <input type="text" class="form-input" id="first-name" />
+        <input
+          type="text"
+          class="form-input"
+          id="first-name"
+          th:field="*{firstName}"
+        />
         <label for="last-name">Efternamn:</label>
-        <input type="text" class="form-input" id="last-name" />
+        <input
+          type="text"
+          class="form-input"
+          id="last-name"
+          th:field="*{lastName}"
+        />
         <label for="city">Stad:</label>
-        <input type="text" class="form-input" id="city" />
+        <input type="text" class="form-input" id="city" th:field="*{city}" />
         <label for="number-of-years">År som activ:</label>
-        <input type="text" class="form-input" id="number-of-years" />
+        <input
+          type="number"
+          class="form-input"
+          id="number-of-years"
+          th:field="*{yearsActive}"
+        />
+        <input type="submit" id="add-new-member" />
       </form>
-      <button id="add-new-member">Spara</button>
     </div>
   </body>
 </html>
