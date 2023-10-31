@@ -11,7 +11,6 @@ public class ClubbController {
   public String GetMemberList(Model model) {
     model.addAttribute("members", HalloUserApplication.clubb.members);
 
-    System.out.println("test");
     return "MemberList";
   }
 }
