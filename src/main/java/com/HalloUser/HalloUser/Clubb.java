@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Clubb {
 
+  int index = 0;
+
   String clubbName;
   String city;
   ArrayList<Member> members;
@@ -44,9 +46,20 @@ public class Clubb {
     String city,
     int yearsActive
   ) {
-    int membershipNumber = members.size() + 1;
+    int membershipNumber;
+    if (members.size() > 0) {
+      Member last = members.get(members.size() - 1);
+      membershipNumber = last.membershipNumber + 1;
+    } else {
+      membershipNumber = 0;
+    }
+
     members.add(
       new Member(firstName, lastName, city, membershipNumber, yearsActive)
     );
+  }
+
+  public void deleteMember(int index) {
+    members.remove(index);
   }
 }
