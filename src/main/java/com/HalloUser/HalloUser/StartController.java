@@ -10,7 +10,9 @@ public class StartController {
   public String GetStart() {
     return "start";
   }
-  //redirect button to memberlist
 
-  //redirect button to new member
+  @GetMapping("/login")
+  public String login() {
+    return "login";
+  }
 }

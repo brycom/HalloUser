@@ -30,7 +30,7 @@ public class MemberController {
       yearsActive
     );
 
-    return "redirect:new-member";
+    return "redirect:/member-list";
   }
 
   @GetMapping("remove-member/{memberchipNumber}")

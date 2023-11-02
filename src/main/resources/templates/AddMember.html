@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/AddMember.css" />
+    <script src="addMember.js" defer></script>
     <title>The club</title>
   </head>
   <body>
@@ -12,12 +13,12 @@
       <ul class="header" id="header-btn-list">
         <li class="btn-list" id="btn-home">
           <a th:href="@{/}">
-            <button>Start sida.</button>
+            <button>Start sida</button>
           </a>
         </li>
         <li class="btn-list" id="btn-new-member">
           <a th:href="@{member-list}">
-            <button>Medlems lista.</button>
+            <button>Medlems lista</button>
           </a>
         </li>
       </ul>
@@ -63,7 +64,7 @@
           th:field="*{newMember.yearsActive}"
           required
         />
-        <input type="submit" id="add-new-member" />
+        <input type="submit" id="add-new-member" value="spara" />
       </form>
     </div>
   </body>
