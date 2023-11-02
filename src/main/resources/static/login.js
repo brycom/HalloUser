@@ -43,8 +43,6 @@ function verifyUser() {
 
     console.log(username);
   }
-
-  //console.log(id);
 }
 function newMember() {
   let localStorageId = localStorage.getItem("id");
@@ -63,7 +61,6 @@ function logOut() {
   localStorage.removeItem("id");
 }
 
-//funktion för att publicera ny medlem.
 loginBtn.addEventListener("click", verifyUser);
 logoutBtn.addEventListener("click", logOut);
 newMember();

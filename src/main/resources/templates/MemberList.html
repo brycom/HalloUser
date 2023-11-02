@@ -27,11 +27,17 @@
       </a>
       <ul id="memberlist">
         <li th:id="${member.membershipNumber}" th:each="member: ${members}">
+          <span> Id: </span>
+          <span th:text="${member.membershipNumber}"></span>
+          <span> Namn: </span>
           <span th:text="${member.firstName}"></span>
           <span> </span>
           <span th:text="${member.lastName}"></span>
+          <span> stad: </span>
+          <span th:text="${member.city}"></span>
         </li>
       </ul>
+      <div><span th:text="${error}"></span></div>
     </div>
   </body>
 </html>

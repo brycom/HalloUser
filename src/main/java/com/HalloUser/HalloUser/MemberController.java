@@ -18,18 +18,23 @@ public class MemberController {
 
   @PostMapping("/add-new-member")
   String newMember(
+    Model model,
     @RequestParam("firstName") String firstName,
     @RequestParam("lastName") String lastName,
     @RequestParam("city") String city,
     @RequestParam("yearsActive") int yearsActive
   ) {
-    HalloUserApplication.clubb.addMember(
-      firstName,
-      lastName,
-      city,
-      yearsActive
-    );
-
+    if (HalloUserApplication.clubb.checkForMember(firstName, lastName)) {
+      HalloUserApplication.clubb.addMember(
+        firstName,
+        lastName,
+        city,
+        yearsActive
+      );
+    } else {
+      System.out.println("Medlemen finns redan");
+      model.addAttribute("error", "Denna medlemen finns redan");
+    }
     return "redirect:/member-list";
   }
 

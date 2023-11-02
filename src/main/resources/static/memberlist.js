@@ -56,41 +56,6 @@ function addNewMemberBtn() {
   btnList.appendChild(newMemberLi);
 }
 
-//funtion för att skapa inputfält och spara knapp knyt till li när klickevet activerats
-
-function createEditForm(item) {
-  const editForm = document.createElement("form");
-  const firstName = document.createElement("input");
-  firstName.setAttribute("id", "first-name" + item.id);
-  const lastName = document.createElement("input");
-  lastName.setAttribute("id", "last-name" + item.id);
-  const city = document.createElement("input");
-  city.setAttribute("id", "city" + item.id);
-  const yearsActive = document.createElement("input" + item.id);
-  yearsActive.setAttribute("id", "years-active" + item.id);
-  //close button
-  const closeEditBtn = document.createElement("button");
-  closeEditBtn.setAttribute("id", "close-edit-btn" + item.id);
-  closeEditBtn.textContent = "Avsluta";
-
-  //savebutton
-  const save = document.createElement("input");
-  save.setAttribute("type", "submit");
-  save.setAttribute("value", "spara");
-
-  editForm.appendChild(firstName);
-  editForm.appendChild(lastName);
-  editForm.appendChild(city);
-  editForm.appendChild(yearsActive);
-  editForm.appendChild(closeEditBtn);
-  editForm.appendChild(save);
-  item.appendChild(editForm);
-}
-
-closeEditBtn.addEventListener("click", (e) => {
-  document.removeChild(editForm);
-});
-
 let localStorageId = localStorage.getItem("id");
 if (localStorageId == id) {
   AddDeleteBtn();
