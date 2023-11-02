@@ -1,5 +1,6 @@
 body {
   background-color: blueviolet;
+  text-align: center;
 }
 #header-btn-list {
   display: flex;
@@ -8,13 +9,17 @@ body {
   width: 15%;
 }
 .btn-list {
-  margin-left: 10px;
+  margin-left: 15px;
+  margin-bottom: 25px;
 }
 
 #title {
   text-align: center;
 }
-.remove-btn {
-  margin-left: 10px;
-  margin-bottom: 5px;
+
+.delete-btn {
+  margin-left: 20px;
+}
+#memberlist {
+  list-style: none;
 }

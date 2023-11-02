@@ -62,4 +62,13 @@ public class Clubb {
   public void deleteMember(int index) {
     members.remove(index);
   }
+
+  public boolean checkForMember(String firstName, String lastName) {
+    for (Member m : members) {
+      if (firstName.equals(m.firstName) && lastName.equals(m.lastName)) {
+        return false;
+      }
+    }
+    return true;
+  }
 }

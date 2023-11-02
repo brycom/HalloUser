@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.CSS" />
+    <script src="login.js" defer></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <header>
+      <h2 class="header" id="title">The Clubb</h2>
+      <ul class="header" id="header-btn-list">
+        <li class="btn-list" id="btn-home">
+          <a th:href="@{/}">
+            <button>Start sida</button>
+          </a>
+        </li>
+
+        <li class="btn-list" id="btn-members">
+          <a th:href="@{/member-list}">
+            <button>Medlems lista</button>
+          </a>
+        </li>
+      </ul>
+    </header>
+    <div class="header" id="header">
+      <h1>Login!</h1>
+    </div>
+    <form class="loginWindow" id="loginWindow">
+      <label for="userName" id="username-label">Username: </label>
+      <input type="text" class="loginWindow-input" id="userName" required />
+      <br />
+      <label for="password" id="password-labal">Password:</label>
+      <input type="password" class="loginWindow-input" id="password" required />
+      <br />
+      <button class="loginWindow" id="loginBtn">login</button>
+    </form>
+  </body>
+</html>
