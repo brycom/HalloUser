@@ -1,12 +1,13 @@
 body {
-  background-color: blueviolet;
+  background-color: rgb(59, 59, 107);
   text-align: center;
 }
 #header-btn-list {
   display: flex;
   list-style-type: none;
-  margin: auto;
-  width: 15%;
+  margin: 0 auto;
+
+  width: 350px;
 }
 .btn-list {
   margin-left: 15px;

@@ -6,9 +6,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class MemberController {
+
+  String errorMessage;
 
   @GetMapping("/new-member")
   public String GetNewMember(Model model) {
@@ -18,7 +21,7 @@ public class MemberController {
 
   @PostMapping("/add-new-member")
   String newMember(
-    Model model,
+    RedirectAttributes redirectAttributes,
     @RequestParam("firstName") String firstName,
     @RequestParam("lastName") String lastName,
     @RequestParam("city") String city,
@@ -32,8 +35,9 @@ public class MemberController {
         yearsActive
       );
     } else {
-      System.out.println("Medlemen finns redan");
-      model.addAttribute("error", "Denna medlemen finns redan");
+      errorMessage = "Denna medlemen finns redan!";
+
+      redirectAttributes.addFlashAttribute("error-message", errorMessage);
     }
     return "redirect:/member-list";
   }
@@ -43,7 +47,7 @@ public class MemberController {
     HalloUserApplication.clubb.members.removeIf(member ->
       member.getMembershipNumber() == memberchipNumber
     );
-    System.out.println("item removed" + memberchipNumber);
+
     return "redirect:/member-list";
   }
 }
