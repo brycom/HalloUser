@@ -1,12 +1,13 @@
 body {
-  background-color: rgb(213, 22, 22);
+  background-color: rgb(59, 59, 107);
   color: aliceblue;
 }
 #header-btn-list {
   display: flex;
   list-style-type: none;
-  margin: auto;
-  width: 15%;
+  margin: 0 auto;
+
+  width: 350px;
 }
 .btn-list {
   margin-left: 10px;
@@ -41,4 +42,9 @@ body {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  border-radius: 5px;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.402);
+}
+h1 {
+  text-align: center;
 }

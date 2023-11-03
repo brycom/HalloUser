@@ -20,11 +20,6 @@
       </ul>
     </header>
     <div id="body-div">
-      <label for="search">Sök medlem:</label>
-      <input type="text" id="search" />
-      <a href="">
-        <button>Sök</button>
-      </a>
       <ul id="memberlist">
         <li th:id="${member.membershipNumber}" th:each="member: ${members}">
           <span> Id: </span>
